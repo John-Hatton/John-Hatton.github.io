@@ -107,8 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4cba49fd202f9a5665dcd601e2783edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a989b8d5e5fe8f14460dad4fdc82cf325"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_two_bit_adder.html#a989b8d5e5fe8f14460dad4fdc82cf325">setBitTwoFullAdder</a> (<a class="el" href="class_full_adder.html">FullAdder</a> *fA2)</td></tr>
 <tr class="separator:a989b8d5e5fe8f14460dad4fdc82cf325"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7595075b62307f6148c63ee24a625ec"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_two_bit_adder.html#aa7595075b62307f6148c63ee24a625ec">answer</a> ()</td></tr>
-<tr class="separator:aa7595075b62307f6148c63ee24a625ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b1ded4dc5f72ab5f33bd7172bedbf20"><td class="memItemLeft" align="right" valign="top">std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_two_bit_adder.html#a3b1ded4dc5f72ab5f33bd7172bedbf20">answer</a> ()</td></tr>
+<tr class="separator:a3b1ded4dc5f72ab5f33bd7172bedbf20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The Two Bit Adder class represents two Full Adders, chained to get to add two two-bit binary numbers. </p>
@@ -120,9 +120,6 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">TwoBitAdder::TwoBitAdder </td>
@@ -131,25 +128,27 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 <p >Default Constructor </p>
 
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00008">8</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>                         {</div>
+<div class="line"><span class="lineno">    9</span>        bitOneFullAdder = <span class="keyword">new</span> <a class="code hl_class" href="class_full_adder.html">FullAdder</a>();</div>
+<div class="line"><span class="lineno">   10</span>        bitTwoFullAdder = <span class="keyword">new</span> <a class="code hl_class" href="class_full_adder.html">FullAdder</a>();</div>
+<div class="line"><span class="lineno">   11</span>}</div>
+<div class="ttc" id="aclass_full_adder_html"><div class="ttname"><a href="class_full_adder.html">FullAdder</a></div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8h_source.html#l00015">FullAdder.h:15</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa7595075b62307f6148c63ee24a625ec" name="aa7595075b62307f6148c63ee24a625ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7595075b62307f6148c63ee24a625ec">&#9670;&#160;</a></span>answer()</h2>
+<a id="a3b1ded4dc5f72ab5f33bd7172bedbf20" name="a3b1ded4dc5f72ab5f33bd7172bedbf20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b1ded4dc5f72ab5f33bd7172bedbf20">&#9670;&#160;</a></span>answer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string TwoBitAdder::answer </td>
+          <td class="memname">std::vector&lt; bool &gt; TwoBitAdder::answer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -158,82 +157,32 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >The answer function is to be interpreted as the result of the inputs given. </p><dl class="section return"><dt>Returns</dt><dd>Returns a string representing the output of the inputs given. For example with the inputs 01 and 11, the generated result would be "0 0100". See the test cases in the test folder for more examples of this. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00057">57</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>                              {</div>
-<div class="line"><span class="lineno">   58</span> </div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>    <span class="keyword">auto</span> fullAdderOne = <span class="keyword">new</span> <a class="code hl_class" href="class_full_adder.html">FullAdder</a>();</div>
-<div class="line"><span class="lineno">   61</span>    <span class="keyword">auto</span> fullAdderTwo = <span class="keyword">new</span> <a class="code hl_class" href="class_full_adder.html">FullAdder</a>();</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00061">61</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>                                    {</div>
 <div class="line"><span class="lineno">   62</span> </div>
-<div class="line"><span class="lineno">   63</span>    fullAdderOne-&gt;setInputX(inputX1);</div>
-<div class="line"><span class="lineno">   64</span>    fullAdderOne-&gt;setInputY(inputY1);</div>
-<div class="line"><span class="lineno">   65</span>    fullAdderOne-&gt;answer();</div>
-<div class="line"><span class="lineno">   66</span> </div>
-<div class="line"><span class="lineno">   67</span>    <span class="comment">// Set the carry out of the first adder to the carry in of the second.</span></div>
-<div class="line"><span class="lineno">   68</span>    fullAdderTwo-&gt;setCarryIn(fullAdderOne-&gt;getCarryOut());</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>    fullAdderTwo-&gt;setInputX(inputX2);</div>
-<div class="line"><span class="lineno">   71</span>    fullAdderTwo-&gt;setInputY(inputY2);</div>
-<div class="line"><span class="lineno">   72</span>    fullAdderTwo-&gt;answer();</div>
+<div class="line"><span class="lineno">   63</span>    bitOneFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a1a56696a7d7c2b3b0c088e8bfa3ecd98">setInputX</a>(inputX1);</div>
+<div class="line"><span class="lineno">   64</span>    bitOneFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a09848162e99bfcfa750781d32c4684a1">setInputY</a>(inputY1);</div>
+<div class="line"><span class="lineno">   65</span>    bitOneFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a1e3339e79ff39ad0c67df73da6250ed2">answer</a>();</div>
+<div class="line"><span class="lineno">   66</span>    sumOneOut = bitOneFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a303d282031d445f5128e2d3d359205bd">getSum</a>();</div>
+<div class="line"><span class="lineno">   67</span> </div>
+<div class="line"><span class="lineno">   68</span>    <span class="comment">// Set the carry out of the first adder to the carry in of the second.</span></div>
+<div class="line"><span class="lineno">   69</span>    bitTwoFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a84de179fe3a964ace7e3852ab214f673">setCarryIn</a>(bitOneFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a5157f2f4d6b3cb5868c5993da575bff4">getCarryOut</a>());</div>
+<div class="line"><span class="lineno">   70</span>    bitTwoFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a1a56696a7d7c2b3b0c088e8bfa3ecd98">setInputX</a>(inputX2);</div>
+<div class="line"><span class="lineno">   71</span>    bitTwoFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a09848162e99bfcfa750781d32c4684a1">setInputY</a>(inputY2);</div>
+<div class="line"><span class="lineno">   72</span>    bitTwoFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a1e3339e79ff39ad0c67df73da6250ed2">answer</a>();</div>
 <div class="line"><span class="lineno">   73</span> </div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>    <span class="comment">// Logic goes here!</span></div>
+<div class="line"><span class="lineno">   74</span>    sumTwoOut = bitTwoFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a303d282031d445f5128e2d3d359205bd">getSum</a>();</div>
+<div class="line"><span class="lineno">   75</span>    carryOut = bitTwoFullAdder-&gt;<a class="code hl_function" href="class_full_adder.html#a5157f2f4d6b3cb5868c5993da575bff4">getCarryOut</a>();</div>
 <div class="line"><span class="lineno">   76</span> </div>
-<div class="line"><span class="lineno">   77</span>    <span class="keywordtype">bool</span> adderOneSum = fullAdderOne-&gt;getSum();</div>
-<div class="line"><span class="lineno">   78</span>    <span class="keywordtype">bool</span> adderTwoSum = fullAdderTwo-&gt;getSum();</div>
-<div class="line"><span class="lineno">   79</span>    <span class="keywordtype">bool</span> adderOneCarryOut = fullAdderOne-&gt;getCarryOut();</div>
-<div class="line"><span class="lineno">   80</span>    <span class="keywordtype">bool</span> adderTwoCarryOut = fullAdderTwo-&gt;getCarryOut();</div>
-<div class="line"><span class="lineno">   81</span> </div>
-<div class="line"><span class="lineno">   82</span>    <span class="comment">// TODO: The idea is, I want to replace those bottom inputs with these, so I&#39;m actually using my logic gates.</span></div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span> </div>
-<div class="line"><span class="lineno">   85</span>    <span class="comment">// Case 1: 00 + 00 == 0000</span></div>
-<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">if</span> (!adderOneSum &amp;&amp; !adderTwoSum &amp;&amp; !adderOneCarryOut &amp;&amp; !adderTwoCarryOut)</div>
-<div class="line"><span class="lineno">   87</span>    {</div>
-<div class="line"><span class="lineno">   88</span>        <span class="comment">// Result is 0</span></div>
-<div class="line"><span class="lineno">   89</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;0 0000&quot;</span>;</div>
-<div class="line"><span class="lineno">   90</span>    }</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>    <span class="comment">// Cases 2-5 == 0001</span></div>
-<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(adderOneSum &amp;&amp; !adderTwoSum &amp;&amp; !adderOneCarryOut &amp;&amp; !adderTwoCarryOut)</div>
-<div class="line"><span class="lineno">   94</span>    {</div>
-<div class="line"><span class="lineno">   95</span>        <span class="comment">// Result is 1</span></div>
-<div class="line"><span class="lineno">   96</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;0 0001&quot;</span>;</div>
-<div class="line"><span class="lineno">   97</span>    }</div>
-<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!adderOneSum &amp;&amp; adderTwoSum &amp;&amp; !adderOneCarryOut &amp;&amp; !adderTwoCarryOut)</div>
-<div class="line"><span class="lineno">   99</span>    {</div>
-<div class="line"><span class="lineno">  100</span>        <span class="comment">// Result is 1</span></div>
-<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;0 0010&quot;</span>;</div>
-<div class="line"><span class="lineno">  102</span>    }</div>
-<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!adderOneSum &amp;&amp; adderTwoSum &amp;&amp; adderOneCarryOut &amp;&amp; !adderTwoCarryOut)</div>
-<div class="line"><span class="lineno">  104</span>    {</div>
-<div class="line"><span class="lineno">  105</span>        <span class="comment">// Result is 1</span></div>
-<div class="line"><span class="lineno">  106</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;0 0010&quot;</span>;</div>
-<div class="line"><span class="lineno">  107</span>    }</div>
-<div class="line"><span class="lineno">  108</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!adderOneSum &amp;&amp; !adderTwoSum &amp;&amp; !adderOneCarryOut &amp;&amp; adderTwoCarryOut)</div>
-<div class="line"><span class="lineno">  109</span>    {</div>
-<div class="line"><span class="lineno">  110</span>        <span class="comment">// Result is 1</span></div>
-<div class="line"><span class="lineno">  111</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;0 0100&quot;</span>;</div>
-<div class="line"><span class="lineno">  112</span>    }</div>
-<div class="line"><span class="lineno">  113</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!adderOneSum &amp;&amp; !adderTwoSum &amp;&amp; adderOneCarryOut &amp;&amp; adderTwoCarryOut)</div>
-<div class="line"><span class="lineno">  114</span>    {</div>
-<div class="line"><span class="lineno">  115</span>        <span class="comment">// Result is 1</span></div>
-<div class="line"><span class="lineno">  116</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;0 0101&quot;</span>;</div>
-<div class="line"><span class="lineno">  117</span>    }</div>
-<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(adderOneSum &amp;&amp; !adderTwoSum &amp;&amp; !adderOneCarryOut &amp;&amp; adderTwoCarryOut)</div>
-<div class="line"><span class="lineno">  119</span>    {</div>
-<div class="line"><span class="lineno">  120</span>        <span class="comment">// Result is 1</span></div>
-<div class="line"><span class="lineno">  121</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;0 0101&quot;</span>;</div>
-<div class="line"><span class="lineno">  122</span>    }</div>
-<div class="line"><span class="lineno">  123</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!adderOneSum &amp;&amp; adderTwoSum &amp;&amp; adderOneCarryOut &amp;&amp; adderTwoCarryOut)</div>
-<div class="line"><span class="lineno">  124</span>    {</div>
-<div class="line"><span class="lineno">  125</span>        <span class="comment">// Result is 1</span></div>
-<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;0 0110&quot;</span>;</div>
-<div class="line"><span class="lineno">  127</span>    }</div>
-<div class="line"><span class="lineno">  128</span> </div>
-<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">return</span> <span class="stringliteral">&quot;-1&quot;</span>; <span class="comment">// TODO: Finish the rest of the test cases for the two bit Adder...</span></div>
-<div class="line"><span class="lineno">  130</span>}</div>
-<div class="ttc" id="aclass_full_adder_html"><div class="ttname"><a href="class_full_adder.html">FullAdder</a></div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8h_source.html#l00014">FullAdder.h:14</a></div></div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">return</span> {carryOut, sumTwoOut, sumOneOut};</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>}</div>
+<div class="ttc" id="aclass_full_adder_html_a09848162e99bfcfa750781d32c4684a1"><div class="ttname"><a href="class_full_adder.html#a09848162e99bfcfa750781d32c4684a1">FullAdder::setInputY</a></div><div class="ttdeci">void setInputY(bool inY)</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00023">FullAdder.cpp:23</a></div></div>
+<div class="ttc" id="aclass_full_adder_html_a1a56696a7d7c2b3b0c088e8bfa3ecd98"><div class="ttname"><a href="class_full_adder.html#a1a56696a7d7c2b3b0c088e8bfa3ecd98">FullAdder::setInputX</a></div><div class="ttdeci">void setInputX(bool inX)</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00015">FullAdder.cpp:15</a></div></div>
+<div class="ttc" id="aclass_full_adder_html_a1e3339e79ff39ad0c67df73da6250ed2"><div class="ttname"><a href="class_full_adder.html#a1e3339e79ff39ad0c67df73da6250ed2">FullAdder::answer</a></div><div class="ttdeci">std::vector&lt; bool &gt; answer()</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00051">FullAdder.cpp:51</a></div></div>
+<div class="ttc" id="aclass_full_adder_html_a303d282031d445f5128e2d3d359205bd"><div class="ttname"><a href="class_full_adder.html#a303d282031d445f5128e2d3d359205bd">FullAdder::getSum</a></div><div class="ttdeci">int getSum() const</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00035">FullAdder.cpp:35</a></div></div>
+<div class="ttc" id="aclass_full_adder_html_a5157f2f4d6b3cb5868c5993da575bff4"><div class="ttname"><a href="class_full_adder.html#a5157f2f4d6b3cb5868c5993da575bff4">FullAdder::getCarryOut</a></div><div class="ttdeci">int getCarryOut()</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00043">FullAdder.cpp:43</a></div></div>
+<div class="ttc" id="aclass_full_adder_html_a84de179fe3a964ace7e3852ab214f673"><div class="ttname"><a href="class_full_adder.html#a84de179fe3a964ace7e3852ab214f673">FullAdder::setCarryIn</a></div><div class="ttdeci">void setCarryIn(bool cIn)</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00031">FullAdder.cpp:31</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -253,10 +202,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >The Get Bit One Full Adder is a getter for the internal Full Adder pointer variable called bitOneFullAdder. This represents the first bit of the two bits being added. </p><dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the internal first <a class="el" href="class_full_adder.html">FullAdder</a> of this class. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00041">41</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                 {</div>
-<div class="line"><span class="lineno">   42</span>    <span class="keywordflow">return</span> bitOneFullAdder;</div>
-<div class="line"><span class="lineno">   43</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00045">45</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                 {</div>
+<div class="line"><span class="lineno">   46</span>    <span class="keywordflow">return</span> bitOneFullAdder;</div>
+<div class="line"><span class="lineno">   47</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -276,10 +225,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >The Get Bit Two Full Adder is a getter for the internal Full Adder pointer variable called bitTwoFullAdder. This represents the second bit of the two bits being added. </p><dl class="section return"><dt>Returns</dt><dd>Returns a pointer to the internal second <a class="el" href="class_full_adder.html">FullAdder</a> of this class. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00049">49</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                 {</div>
-<div class="line"><span class="lineno">   50</span>    <span class="keywordflow">return</span> bitTwoFullAdder;</div>
-<div class="line"><span class="lineno">   51</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00053">53</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                 {</div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">return</span> bitTwoFullAdder;</div>
+<div class="line"><span class="lineno">   55</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -299,10 +248,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >The Get Input X1 function is a getter for the internal inputX1 boolean. </p><dl class="section return"><dt>Returns</dt><dd>Returns the encapsulated value of inputX1. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00009">9</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">    9</span>                                   {</div>
-<div class="line"><span class="lineno">   10</span>    <span class="keywordflow">return</span> inputX1;</div>
-<div class="line"><span class="lineno">   11</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00013">13</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>                                   {</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">return</span> inputX1;</div>
+<div class="line"><span class="lineno">   15</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -322,10 +271,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >The Get Input X2 function is a getter for the internal inputX2 boolean. </p><dl class="section return"><dt>Returns</dt><dd>Returns the encapsulated value of inputX2. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00025">25</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>                                   {</div>
-<div class="line"><span class="lineno">   26</span>    <span class="keywordflow">return</span> inputX2;</div>
-<div class="line"><span class="lineno">   27</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00029">29</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                                   {</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keywordflow">return</span> inputX2;</div>
+<div class="line"><span class="lineno">   31</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -345,10 +294,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >The Get Input Y1 function is a getter for the internal inputY1 boolean. </p><dl class="section return"><dt>Returns</dt><dd>Returns the encapsulated value of inputY1. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00017">17</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                                   {</div>
-<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">return</span> inputY1;</div>
-<div class="line"><span class="lineno">   19</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00021">21</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   21</span>                                   {</div>
+<div class="line"><span class="lineno">   22</span>    <span class="keywordflow">return</span> inputY1;</div>
+<div class="line"><span class="lineno">   23</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -368,10 +317,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p >The Get Input Y2 function is a getter for the internal inputY2 boolean. </p><dl class="section return"><dt>Returns</dt><dd>Returns the encapsulated value of inputY2. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00033">33</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   33</span>                                   {</div>
-<div class="line"><span class="lineno">   34</span>    <span class="keywordflow">return</span> inputY2;</div>
-<div class="line"><span class="lineno">   35</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00037">37</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   37</span>                                   {</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span> inputY2;</div>
+<div class="line"><span class="lineno">   39</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -397,10 +346,10 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00045">45</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                   {</div>
-<div class="line"><span class="lineno">   46</span>    bitOneFullAdder = fA1;</div>
-<div class="line"><span class="lineno">   47</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00049">49</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   49</span>                                                   {</div>
+<div class="line"><span class="lineno">   50</span>    bitOneFullAdder = fA1;</div>
+<div class="line"><span class="lineno">   51</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -426,10 +375,10 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00053">53</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   53</span>                                                   {</div>
-<div class="line"><span class="lineno">   54</span>    bitTwoFullAdder = fA2;</div>
-<div class="line"><span class="lineno">   55</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00057">57</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>                                                   {</div>
+<div class="line"><span class="lineno">   58</span>    bitTwoFullAdder = fA2;</div>
+<div class="line"><span class="lineno">   59</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -455,10 +404,10 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00013">13</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   13</span>                                      {</div>
-<div class="line"><span class="lineno">   14</span>    inputX1 = inX1;</div>
-<div class="line"><span class="lineno">   15</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00017">17</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   17</span>                                      {</div>
+<div class="line"><span class="lineno">   18</span>    inputX1 = inX1;</div>
+<div class="line"><span class="lineno">   19</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -484,10 +433,10 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00029">29</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   29</span>                                      {</div>
-<div class="line"><span class="lineno">   30</span>    inputX2 = inX2;</div>
-<div class="line"><span class="lineno">   31</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00033">33</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>                                      {</div>
+<div class="line"><span class="lineno">   34</span>    inputX2 = inX2;</div>
+<div class="line"><span class="lineno">   35</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -513,10 +462,10 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00021">21</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>                                      {</div>
-<div class="line"><span class="lineno">   22</span>    inputY1 = inY1;</div>
-<div class="line"><span class="lineno">   23</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00025">25</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   25</span>                                      {</div>
+<div class="line"><span class="lineno">   26</span>    inputY1 = inY1;</div>
+<div class="line"><span class="lineno">   27</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -542,10 +491,10 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00037">37</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   37</span>                                      {</div>
-<div class="line"><span class="lineno">   38</span>    inputY2 = inY2;</div>
-<div class="line"><span class="lineno">   39</span>}</div>
+<p class="definition">Definition at line <a class="el" href="_two_bit_adder_8cpp_source.html#l00041">41</a> of file <a class="el" href="_two_bit_adder_8cpp_source.html">TwoBitAdder.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>                                      {</div>
+<div class="line"><span class="lineno">   42</span>    inputY2 = inY2;</div>
+<div class="line"><span class="lineno">   43</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

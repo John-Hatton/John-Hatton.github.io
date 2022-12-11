@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orgate_0',['OrGate',['../class_or_gate.html',1,'OrGate'],['../class_or_gate.html#acf332278bb97f7346cafa2be6658353e',1,'OrGate::OrGate()']]]
+  ['invertedbuffergate_0',['InvertedBufferGate',['../class_inverted_buffer_gate.html',1,'InvertedBufferGate'],['../class_inverted_buffer_gate.html#a31ff194274f3ee8448712d3a2b7d520a',1,'InvertedBufferGate::InvertedBufferGate()']]]
 ];

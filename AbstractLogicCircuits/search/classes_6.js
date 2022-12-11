@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orgate_0',['OrGate',['../class_or_gate.html',1,'']]]
+  ['invertedbuffergate_0',['InvertedBufferGate',['../class_inverted_buffer_gate.html',1,'']]]
 ];

@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    carryOut = myCarryOut;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_full_adder.html#a34591b876cba94b8a980951c4a8c1ced">   51</a></span>std::string <a class="code hl_function" href="class_full_adder.html#a34591b876cba94b8a980951c4a8c1ced">FullAdder::answer</a>() {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_full_adder.html#a1e3339e79ff39ad0c67df73da6250ed2">   51</a></span>std::vector&lt;bool&gt; <a class="code hl_function" href="class_full_adder.html#a1e3339e79ff39ad0c67df73da6250ed2">FullAdder::answer</a>() {</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">// Initialize objects</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
@@ -176,28 +176,28 @@ $(function() {
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        {</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="comment">// Result is 0+0</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            sum = mySum;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0001&quot;</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!mySum &amp;&amp; (!inputX &amp;&amp; inputY))</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="comment">// Result is 0+1 + 1 (CARRY IN!!!)</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            sum = mySum;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            carryOut = myCarryOut;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0010&quot;</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!mySum &amp;&amp; (inputX &amp;&amp; !inputY))</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        {</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="comment">// Result is 1+0 + 1 (CARRY IN!!!)</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            sum = mySum;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            carryOut = myCarryOut;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0010&quot;</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        }</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((mySum &amp;&amp; myCarryOut) &amp;&amp; (inputX &amp;&amp; inputY))</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        {</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="comment">// Result is 1+1 + 1 (CARRY IN!!!)</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            sum = mySum;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            carryOut = myCarryOut;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0011&quot;</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        {</div>
@@ -213,41 +213,42 @@ $(function() {
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        {</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            sum = mySum;</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <span class="comment">// Result is 0+0</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0000&quot;</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        }</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((mySum &amp;&amp; !myCarryOut) &amp;&amp; (!inputX &amp;&amp; inputY))</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        {</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="comment">// Result is 0+1</span></div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            sum = mySum;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0001&quot;</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        }</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((mySum &amp;&amp; !myCarryOut) &amp;&amp; (inputX &amp;&amp; !inputY))</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            <span class="comment">// Result is 1+0</span></div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            sum = mySum;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0001&quot;</span>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        }</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((!mySum &amp;&amp; myCarryOut) &amp;&amp; (inputX &amp;&amp; inputY))</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        {</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <span class="comment">// Result is 1+1</span></div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            sum = mySum;</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            carryOut = myCarryOut;</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0010&quot;</span>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        {</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Something went very wrong...&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        }</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>}</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">return</span> {<span class="keyword">false</span>};</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>}</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
 <div class="ttc" id="aclass_and_gate_html"><div class="ttname"><a href="class_and_gate.html">AndGate</a></div><div class="ttdef"><b>Definition:</b> <a href="_and_gate_8h_source.html#l00012">AndGate.h:12</a></div></div>
 <div class="ttc" id="aclass_full_adder_html_a0115b2ec911cc2d699d80dec10b9e2f6"><div class="ttname"><a href="class_full_adder.html#a0115b2ec911cc2d699d80dec10b9e2f6">FullAdder::getInputX</a></div><div class="ttdeci">bool getInputX() const</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00011">FullAdder.cpp:11</a></div></div>
 <div class="ttc" id="aclass_full_adder_html_a09848162e99bfcfa750781d32c4684a1"><div class="ttname"><a href="class_full_adder.html#a09848162e99bfcfa750781d32c4684a1">FullAdder::setInputY</a></div><div class="ttdeci">void setInputY(bool inY)</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00023">FullAdder.cpp:23</a></div></div>
 <div class="ttc" id="aclass_full_adder_html_a1a56696a7d7c2b3b0c088e8bfa3ecd98"><div class="ttname"><a href="class_full_adder.html#a1a56696a7d7c2b3b0c088e8bfa3ecd98">FullAdder::setInputX</a></div><div class="ttdeci">void setInputX(bool inX)</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00015">FullAdder.cpp:15</a></div></div>
+<div class="ttc" id="aclass_full_adder_html_a1e3339e79ff39ad0c67df73da6250ed2"><div class="ttname"><a href="class_full_adder.html#a1e3339e79ff39ad0c67df73da6250ed2">FullAdder::answer</a></div><div class="ttdeci">std::vector&lt; bool &gt; answer()</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00051">FullAdder.cpp:51</a></div></div>
 <div class="ttc" id="aclass_full_adder_html_a303d282031d445f5128e2d3d359205bd"><div class="ttname"><a href="class_full_adder.html#a303d282031d445f5128e2d3d359205bd">FullAdder::getSum</a></div><div class="ttdeci">int getSum() const</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00035">FullAdder.cpp:35</a></div></div>
 <div class="ttc" id="aclass_full_adder_html_a326a1ada04b1e4159723de51b1bdb263"><div class="ttname"><a href="class_full_adder.html#a326a1ada04b1e4159723de51b1bdb263">FullAdder::setSum</a></div><div class="ttdeci">void setSum(int mySum)</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00039">FullAdder.cpp:39</a></div></div>
-<div class="ttc" id="aclass_full_adder_html_a34591b876cba94b8a980951c4a8c1ced"><div class="ttname"><a href="class_full_adder.html#a34591b876cba94b8a980951c4a8c1ced">FullAdder::answer</a></div><div class="ttdeci">std::string answer()</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00051">FullAdder.cpp:51</a></div></div>
 <div class="ttc" id="aclass_full_adder_html_a3d4c8dff779c6f07db9ce607f19a529d"><div class="ttname"><a href="class_full_adder.html#a3d4c8dff779c6f07db9ce607f19a529d">FullAdder::setCarryOut</a></div><div class="ttdeci">void setCarryOut(int myCarryOut)</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00047">FullAdder.cpp:47</a></div></div>
 <div class="ttc" id="aclass_full_adder_html_a5157f2f4d6b3cb5868c5993da575bff4"><div class="ttname"><a href="class_full_adder.html#a5157f2f4d6b3cb5868c5993da575bff4">FullAdder::getCarryOut</a></div><div class="ttdeci">int getCarryOut()</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00043">FullAdder.cpp:43</a></div></div>
 <div class="ttc" id="aclass_full_adder_html_a84de179fe3a964ace7e3852ab214f673"><div class="ttname"><a href="class_full_adder.html#a84de179fe3a964ace7e3852ab214f673">FullAdder::setCarryIn</a></div><div class="ttdeci">void setCarryIn(bool cIn)</div><div class="ttdef"><b>Definition:</b> <a href="_full_adder_8cpp_source.html#l00031">FullAdder.cpp:31</a></div></div>

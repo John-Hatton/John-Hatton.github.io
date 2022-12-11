@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fulladder_0',['FullAdder',['../class_full_adder.html',1,'FullAdder'],['../class_full_adder.html#ad51cec7a937f0ea2c8ae62459c28c357',1,'FullAdder::FullAdder()']]]
+  ['eightbitadder_0',['EightBitAdder',['../class_eight_bit_adder.html',1,'EightBitAdder'],['../class_eight_bit_adder.html#a8f4c16ddd50d713f074f5da7bc89412d',1,'EightBitAdder::EightBitAdder()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['twobitadder_0',['TwoBitAdder',['../class_two_bit_adder.html#ab9130a2a6abcdb20a11f7bcb5f1bd4b4',1,'TwoBitAdder']]]
+  ['orgate_0',['OrGate',['../class_or_gate.html#acf332278bb97f7346cafa2be6658353e',1,'OrGate']]]
 ];

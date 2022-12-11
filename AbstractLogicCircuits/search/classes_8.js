@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xorgate_0',['XorGate',['../class_xor_gate.html',1,'']]]
+  ['orgate_0',['OrGate',['../class_or_gate.html',1,'']]]
 ];

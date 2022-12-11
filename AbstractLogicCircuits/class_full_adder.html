@@ -103,13 +103,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5157f2f4d6b3cb5868c5993da575bff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4c8dff779c6f07db9ce607f19a529d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_full_adder.html#a3d4c8dff779c6f07db9ce607f19a529d">setCarryOut</a> (int myCarryOut)</td></tr>
 <tr class="separator:a3d4c8dff779c6f07db9ce607f19a529d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34591b876cba94b8a980951c4a8c1ced"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_full_adder.html#a34591b876cba94b8a980951c4a8c1ced">answer</a> ()</td></tr>
-<tr class="separator:a34591b876cba94b8a980951c4a8c1ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e3339e79ff39ad0c67df73da6250ed2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_full_adder.html#a1e3339e79ff39ad0c67df73da6250ed2">answer</a> ()</td></tr>
+<tr class="separator:a1e3339e79ff39ad0c67df73da6250ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The Full Adder class is an abstraction for a full adder. The internal design uses two XOR gates, two AND gates, and one OR gate to accomplish this. I might experiment later, and create a NAND gate, to try to make some of these same circuits with just NAND logic, to see how effective that might be. </p>
 
-<p class="definition">Definition at line <a class="el" href="_full_adder_8h_source.html#l00014">14</a> of file <a class="el" href="_full_adder_8h_source.html">FullAdder.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_full_adder_8h_source.html#l00015">15</a> of file <a class="el" href="_full_adder_8h_source.html">FullAdder.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad51cec7a937f0ea2c8ae62459c28c357" name="ad51cec7a937f0ea2c8ae62459c28c357"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad51cec7a937f0ea2c8ae62459c28c357">&#9670;&#160;</a></span>FullAdder()</h2>
@@ -138,14 +138,14 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a34591b876cba94b8a980951c4a8c1ced" name="a34591b876cba94b8a980951c4a8c1ced"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34591b876cba94b8a980951c4a8c1ced">&#9670;&#160;</a></span>answer()</h2>
+<a id="a1e3339e79ff39ad0c67df73da6250ed2" name="a1e3339e79ff39ad0c67df73da6250ed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e3339e79ff39ad0c67df73da6250ed2">&#9670;&#160;</a></span>answer()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string FullAdder::answer </td>
+          <td class="memname">std::vector&lt; bool &gt; FullAdder::answer </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -155,7 +155,7 @@ Public Member Functions</h2></td></tr>
 <p >The answer function is to be interpreted as the result of the inputs given. </p><dl class="section return"><dt>Returns</dt><dd>Returns a string representing the output of the inputs given. For example with the inputs 0 and 1, the generated result would be "0001". </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_full_adder_8cpp_source.html#l00051">51</a> of file <a class="el" href="_full_adder_8cpp_source.html">FullAdder.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                            {</div>
+<div class="fragment"><div class="line"><span class="lineno">   51</span>                                  {</div>
 <div class="line"><span class="lineno">   52</span> </div>
 <div class="line"><span class="lineno">   53</span>    <span class="comment">// Initialize objects</span></div>
 <div class="line"><span class="lineno">   54</span> </div>
@@ -204,28 +204,28 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">   97</span>        {</div>
 <div class="line"><span class="lineno">   98</span>            <span class="comment">// Result is 0+0</span></div>
 <div class="line"><span class="lineno">   99</span>            sum = mySum;</div>
-<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0001&quot;</span>;</div>
+<div class="line"><span class="lineno">  100</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><span class="lineno">  101</span>        }</div>
 <div class="line"><span class="lineno">  102</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!mySum &amp;&amp; (!inputX &amp;&amp; inputY))</div>
 <div class="line"><span class="lineno">  103</span>        {</div>
 <div class="line"><span class="lineno">  104</span>            <span class="comment">// Result is 0+1 + 1 (CARRY IN!!!)</span></div>
 <div class="line"><span class="lineno">  105</span>            sum = mySum;</div>
 <div class="line"><span class="lineno">  106</span>            carryOut = myCarryOut;</div>
-<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0010&quot;</span>;</div>
+<div class="line"><span class="lineno">  107</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><span class="lineno">  108</span>        }</div>
 <div class="line"><span class="lineno">  109</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!mySum &amp;&amp; (inputX &amp;&amp; !inputY))</div>
 <div class="line"><span class="lineno">  110</span>        {</div>
 <div class="line"><span class="lineno">  111</span>            <span class="comment">// Result is 1+0 + 1 (CARRY IN!!!)</span></div>
 <div class="line"><span class="lineno">  112</span>            sum = mySum;</div>
 <div class="line"><span class="lineno">  113</span>            carryOut = myCarryOut;</div>
-<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0010&quot;</span>;</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><span class="lineno">  115</span>        }</div>
 <div class="line"><span class="lineno">  116</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((mySum &amp;&amp; myCarryOut) &amp;&amp; (inputX &amp;&amp; inputY))</div>
 <div class="line"><span class="lineno">  117</span>        {</div>
 <div class="line"><span class="lineno">  118</span>            <span class="comment">// Result is 1+1 + 1 (CARRY IN!!!)</span></div>
 <div class="line"><span class="lineno">  119</span>            sum = mySum;</div>
 <div class="line"><span class="lineno">  120</span>            carryOut = myCarryOut;</div>
-<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0011&quot;</span>;</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><span class="lineno">  122</span>        }</div>
 <div class="line"><span class="lineno">  123</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  124</span>        {</div>
@@ -241,33 +241,34 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="lineno">  134</span>        {</div>
 <div class="line"><span class="lineno">  135</span>            sum = mySum;</div>
 <div class="line"><span class="lineno">  136</span>            <span class="comment">// Result is 0+0</span></div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0000&quot;</span>;</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><span class="lineno">  138</span>        }</div>
 <div class="line"><span class="lineno">  139</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((mySum &amp;&amp; !myCarryOut) &amp;&amp; (!inputX &amp;&amp; inputY))</div>
 <div class="line"><span class="lineno">  140</span>        {</div>
 <div class="line"><span class="lineno">  141</span>            <span class="comment">// Result is 0+1</span></div>
 <div class="line"><span class="lineno">  142</span>            sum = mySum;</div>
-<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0001&quot;</span>;</div>
+<div class="line"><span class="lineno">  143</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><span class="lineno">  144</span>        }</div>
 <div class="line"><span class="lineno">  145</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((mySum &amp;&amp; !myCarryOut) &amp;&amp; (inputX &amp;&amp; !inputY))</div>
 <div class="line"><span class="lineno">  146</span>        {</div>
 <div class="line"><span class="lineno">  147</span>            <span class="comment">// Result is 1+0</span></div>
 <div class="line"><span class="lineno">  148</span>            sum = mySum;</div>
-<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0001&quot;</span>;</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><span class="lineno">  150</span>        }</div>
 <div class="line"><span class="lineno">  151</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((!mySum &amp;&amp; myCarryOut) &amp;&amp; (inputX &amp;&amp; inputY))</div>
 <div class="line"><span class="lineno">  152</span>        {</div>
 <div class="line"><span class="lineno">  153</span>            <span class="comment">// Result is 1+1</span></div>
 <div class="line"><span class="lineno">  154</span>            sum = mySum;</div>
 <div class="line"><span class="lineno">  155</span>            carryOut = myCarryOut;</div>
-<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">return</span> <span class="stringliteral">&quot;0010&quot;</span>;</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">return</span> {carryOut,sum};</div>
 <div class="line"><span class="lineno">  157</span>        }</div>
 <div class="line"><span class="lineno">  158</span>        <span class="keywordflow">else</span></div>
 <div class="line"><span class="lineno">  159</span>        {</div>
 <div class="line"><span class="lineno">  160</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;Something went very wrong...&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><span class="lineno">  161</span>        }</div>
 <div class="line"><span class="lineno">  162</span>    }</div>
-<div class="line"><span class="lineno">  163</span>}</div>
+<div class="line"><span class="lineno">  163</span>    <span class="keywordflow">return</span> {<span class="keyword">false</span>};</div>
+<div class="line"><span class="lineno">  164</span>}</div>
 <div class="ttc" id="aclass_and_gate_html"><div class="ttname"><a href="class_and_gate.html">AndGate</a></div><div class="ttdef"><b>Definition:</b> <a href="_and_gate_8h_source.html#l00012">AndGate.h:12</a></div></div>
 <div class="ttc" id="aclass_or_gate_html"><div class="ttname"><a href="class_or_gate.html">OrGate</a></div><div class="ttdef"><b>Definition:</b> <a href="_or_gate_8h_source.html#l00009">OrGate.h:9</a></div></div>
 <div class="ttc" id="aclass_xor_gate_html"><div class="ttname"><a href="class_xor_gate.html">XorGate</a></div><div class="ttdef"><b>Definition:</b> <a href="_xor_gate_8h_source.html#l00009">XorGate.h:9</a></div></div>

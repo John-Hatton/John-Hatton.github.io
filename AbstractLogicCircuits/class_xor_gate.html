@@ -83,15 +83,15 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab00bbb2ac6afec741771ef20596f0f36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#ab00bbb2ac6afec741771ef20596f0f36">XorGate</a> ()</td></tr>
 <tr class="separator:ab00bbb2ac6afec741771ef20596f0f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adeff391284689a6528076c7cc4c85cd6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#adeff391284689a6528076c7cc4c85cd6">getInputX</a> () const</td></tr>
+<tr class="memitem:adeff391284689a6528076c7cc4c85cd6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#adeff391284689a6528076c7cc4c85cd6">getInputX</a> () const</td></tr>
 <tr class="separator:adeff391284689a6528076c7cc4c85cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25c7703df06690e9c400bf90d53435c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#a25c7703df06690e9c400bf90d53435c1">setInputX</a> (bool inX)</td></tr>
+<tr class="memitem:a25c7703df06690e9c400bf90d53435c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#a25c7703df06690e9c400bf90d53435c1">setInputX</a> (bool inX)</td></tr>
 <tr class="separator:a25c7703df06690e9c400bf90d53435c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a7a0b5917b14a9fdc4f1d2b473e6dd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#a7a7a0b5917b14a9fdc4f1d2b473e6dd1">getInputY</a> () const</td></tr>
+<tr class="memitem:a7a7a0b5917b14a9fdc4f1d2b473e6dd1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#a7a7a0b5917b14a9fdc4f1d2b473e6dd1">getInputY</a> () const</td></tr>
 <tr class="separator:a7a7a0b5917b14a9fdc4f1d2b473e6dd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a041942c01cdc790e23f335ae5e5edfb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#a041942c01cdc790e23f335ae5e5edfb9">setInputY</a> (bool inY)</td></tr>
+<tr class="memitem:a041942c01cdc790e23f335ae5e5edfb9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#a041942c01cdc790e23f335ae5e5edfb9">setInputY</a> (bool inY)</td></tr>
 <tr class="separator:a041942c01cdc790e23f335ae5e5edfb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94416fecceb0fbb78b59c620766a589a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#a94416fecceb0fbb78b59c620766a589a">answer</a> ()</td></tr>
+<tr class="memitem:a94416fecceb0fbb78b59c620766a589a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xor_gate.html#a94416fecceb0fbb78b59c620766a589a">answer</a> ()</td></tr>
 <tr class="separator:a94416fecceb0fbb78b59c620766a589a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -128,6 +128,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool XorGate::answer </td>
@@ -136,6 +139,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p >The answer function is to be interpreted as the result of the inputs given. </p><dl class="section return"><dt>Returns</dt><dd>Returns a boolean representing the output of inputX XOR inputY. </dd></dl>
 
@@ -152,6 +160,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool XorGate::getInputX </td>
@@ -160,6 +171,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p >The Get Input X function is a getter for the internal inputX boolean. </p><dl class="section return"><dt>Returns</dt><dd>Returns the encapsulated value of inputX. </dd></dl>
 
@@ -175,6 +191,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">bool XorGate::getInputY </td>
@@ -183,6 +202,11 @@ Public Member Functions</h2></td></tr>
           <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p >The Get Input Y function is a getter for the internal inputY boolean. </p><dl class="section return"><dt>Returns</dt><dd>Returns the encapsulated value of inputY. </dd></dl>
 
@@ -198,6 +222,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void XorGate::setInputX </td>
@@ -207,6 +234,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p >The Set Input X function is a setter for the internal inputX boolean. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -227,6 +259,9 @@ Public Member Functions</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void XorGate::setInputY </td>
@@ -236,6 +271,11 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p >The Set Input Y function is a setter for the internal inputY boolean. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
